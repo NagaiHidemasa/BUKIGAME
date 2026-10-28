@@ -7,6 +7,12 @@
     <Filter Include="Source\Map">
       <UniqueIdentifier>{53de8ce3-bd4f-4017-9f7f-496cad3df305}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Player">
+      <UniqueIdentifier>{af6f4160-bcff-4f0b-92f9-3a7989fa5dfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GameSetting">
+      <UniqueIdentifier>{1b32bda4-04b6-4f19-9a79-159da2fc7d16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -21,6 +27,9 @@
     <ClCompile Include="Source\Map\MapManager.cpp">
       <Filter>Source\Map</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Player\Player.cpp">
+      <Filter>Source\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Map\Map.h">
@@ -34,6 +43,12 @@
     </ClInclude>
     <ClInclude Include="Source\Map\MapManager.h">
       <Filter>Source\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Player\Player.h">
+      <Filter>Source\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameSetting\GameSetting.h">
+      <Filter>Source\GameSetting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

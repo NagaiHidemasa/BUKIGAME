@@ -5,62 +5,65 @@ MapData g_Map[MAP_MAX] = { 0 };
 int g_MapHandle[MAP_TYPE_MAX] = { 0 };
 
 
-void InitMap()
+void InitdMap()
 {
 	MapData* map = g_Map;
 	for (int i = 0; i < MAP_MAX; i++, map++)
 	{
+		map->active = false;
 		map->pos = VGet(0.0f, 0.0f, 0.0f);
 		map->type = MAP_CHIP_NONE;
 	}
 }
 
-void LoadMao()
+void LoaddMap()
 {
 	g_MapHandle[NORMAL_MAP] = LoadGraph("Data/Frore/Frore.jpg");
 }
 
-
-void LoadMap()
-{
-}
-
-void StartMap()
+void StartdMap()
 {
 	
 }
 
 
-void StepMap() 
+void StepdMap() 
 {
 
 }
 
 
-void DrawMap() 
+void DrawdMap() 
 {
 	MapData* map = g_Map;
 	for (int i = 0; i < MAP_MAX; i++, map++) 
 	{
-		DrawGraph(0, 0, map->handle, TRUE);
+		if (map->active) 
+		{
+			DrawGraph((int)map->pos.x, (int)map->pos.y, map->handle, TRUE);
+		}
 	}
 }
 
 
-void FinMap() 
+void FindMap() 
 {
 
 }
 
-MapData* CreateMap(MapChipType type, VECTOR pos)
+MapData* CreatedMap(MapChipType type, VECTOR pos)
 {
 	MapData* map = g_Map;
 	for (int i = 0; i < MAP_MAX; i++, map++)
 	{
-		map->handle = g_MapHandle[type];
-		map->pos = pos;
-		map->type = type;
-		return map;
+		if (!map->active)
+		{
+			map->active = true;
+			map->handle = g_MapHandle[type];
+			map->pos = pos;
+			map->type = type;
+			return map;
+		}
 	}
 	return nullptr;
 }

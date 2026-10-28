@@ -10,7 +10,7 @@ void LoadMapChipData()
 	FILE* fp;
 	if (fopen_s(&fp, "Data/Frore/Map.bin", "rb") != 0)return;
 	for (int i = 0; i < MAP_CHIP_Y_NUM; i++) {
-		for (int j = 0; i < MAP_CHIP_X_NUM; j++) 
+		for (int j = 0; j < MAP_CHIP_X_NUM; j++) 
 		{
 			int map = fgetc(fp);
 			g_MapChip[i][j].mapChip = map;
@@ -28,9 +28,9 @@ void CreateMap()
 
 			if (type == MAP_CHIP_NONE)continue;
 
-			VECTOR pos = VGet(j * MAP_CHIP_WIDTH, i + MAP_CHIP_HEIGHT, 0.0f);
+			VECTOR pos = VGet(j * MAP_CHIP_WIDTH, i * MAP_CHIP_HEIGHT, 0.0f);
 
-			g_MapChip[i][j].data = CreateMap(type, pos);
+			g_MapChip[i][j].data = CreatedMap(type, pos);
 		}
 	}
 }

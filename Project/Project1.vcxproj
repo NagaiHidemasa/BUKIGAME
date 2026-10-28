@@ -139,12 +139,15 @@
     <ClCompile Include="Source\Map\Map..cpp" />
     <ClCompile Include="Source\Map\MapChip.cpp" />
     <ClCompile Include="Source\Map\MapManager.cpp" />
+    <ClCompile Include="Source\Player\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\GameSetting\GameSetting.h" />
     <ClInclude Include="Source\Map\Map.h" />
     <ClInclude Include="Source\Map\MapChip.h" />
     <ClInclude Include="Source\Map\MapManager.h" />
     <ClInclude Include="Source\Map\MapParameter.h" />
+    <ClInclude Include="Source\Player\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

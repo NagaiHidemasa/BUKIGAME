@@ -11,5 +11,25 @@ void InitMap()
 void LoadMap() 
 {
 	LoadMapChipData();
-	LoadMap();
+	LoaddMap();
+}
+
+void StartMap() 
+{
+	CreateMap();
+}
+
+void DrawMap() 
+{
+	DrawdMap();
+}
+
+void FinMap() 
+{
+
+}
+
+void ChceckMapPlayerCollision()
+{
+
 }

@@ -4,8 +4,8 @@
 #define MAP_MAX 1350
 #define MAP_CHIP_X_NUM (45)
 #define MAP_CHIP_Y_NUM (30)
-#define MAP_CHIP_WIDTH (1254.0f)
-#define MAP_CHIP_HEIGHT (1254.0f)
+#define MAP_CHIP_WIDTH (512.0f)
+#define MAP_CHIP_HEIGHT (512.0f)
 
 enum MapChipType
 {
@@ -16,6 +16,7 @@ enum MapChipType
 
 struct MapData
 {
+	bool active;
 	int handle;
 	MapChipType type;
 	VECTOR pos;
