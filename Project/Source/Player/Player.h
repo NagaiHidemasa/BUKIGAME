@@ -3,8 +3,12 @@
 struct PlayerData
 {
 	bool active;
+	int Level;
+	int HP;
+	int experience;
 	float moveX;
 	float moveY;
+	float ATK;
 	VECTOR pos;
 };
 

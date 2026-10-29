@@ -10,7 +10,7 @@ void LoadMapChipData()
 	FILE* fp;
 	if (fopen_s(&fp, "Data/Frore/Map.bin", "rb") != 0)return;
 	for (int i = 0; i < MAP_CHIP_Y_NUM; i++) {
-		for (int j = 0; j < MAP_CHIP_X_NUM; j++) 
+		for (int j = 0;j < MAP_CHIP_X_NUM; j++) 
 		{
 			int map = fgetc(fp);
 			g_MapChip[i][j].mapChip = map;

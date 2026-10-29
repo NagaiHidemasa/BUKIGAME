@@ -1,6 +1,9 @@
 #include "DxLib.h"
-#include "Map/MapManager.h"
 #include "GameSetting/GameSetting.h"
+#include "FPS/FPS.h"
+#include "Input/Input.h"
+#include "Scene/SceneManager.h"
+
 
 
 //プログラムはWinMainから始まる
@@ -19,23 +22,23 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPSTR lpCm
 	//描画先を裏画面にする
 	SetDrawScreen(DX_SCREEN_BACK);
 
+	InitInput();
 
-	///////
+	InitFPS();
 
-	LoadMap();
-
-	StartMap();
-	////////
 	//ゲームのメインループ
 	while (ProcessMessage() >= 0)
 	{
-
 		Sleep(1);
 
 		//画面をクリア
 		ClearDrawScreen();
 
-		DrawMap();
+		UpdateInput();
+
+		DrawInput();
+
+		SceneManagerUpdate();
 
 		//エスケープキーで終了
 		if (CheckHitKey(KEY_INPUT_ESCAPE))break;
