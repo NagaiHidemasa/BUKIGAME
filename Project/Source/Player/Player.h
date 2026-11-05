@@ -6,9 +6,8 @@ struct PlayerData
 	int Level;
 	int HP;
 	int experience;
-	float moveX;
-	float moveY;
 	float ATK;
+	VECTOR move;
 	VECTOR pos;
 };
 
@@ -28,5 +27,7 @@ void UpdatePlayer();
 void DrawPlayer();
 void FinPlayer();
 
-PlayerData GetPlayer();
+PlayerData* GetPlayer();
 Handle GetHandle();
+
+void PlayerHitEnemy();

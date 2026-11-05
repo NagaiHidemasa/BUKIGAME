@@ -1,5 +1,6 @@
 #include "Map.h"
 #include "MapManager.h"
+#include "../Camera/Camera.h"
 
 MapData g_Map[MAP_MAX] = { 0 };
 int g_MapHandle[MAP_TYPE_MAX] = { 0 };
@@ -36,11 +37,13 @@ void StepdMap()
 void DrawdMap() 
 {
 	MapData* map = g_Map;
+	CameraData camera = GetCamera();
+
 	for (int i = 0; i < MAP_MAX; i++, map++) 
 	{
 		if (map->active) 
 		{
-			DrawGraph((int)map->pos.x, (int)map->pos.y, map->handle, TRUE);
+			DrawGraph((int) (map->pos.x-camera.pos.x), (int) (map->pos.y-camera.pos.y), map->handle, TRUE);
 		}
 	}
 }

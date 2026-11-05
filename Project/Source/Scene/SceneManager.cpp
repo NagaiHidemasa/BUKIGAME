@@ -19,7 +19,6 @@ void SceneManagerUpdate()
 	case SCENE_STATE_INIT:
 		InitScene();
 
-
 		g_SceneState = SCENE_STATE_LOAD;
 		break;
 

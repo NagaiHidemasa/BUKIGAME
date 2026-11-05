@@ -4,15 +4,24 @@
 #include "../../Input/Input.h"
 #include "../../Map/MapManager.h"
 #include "../../Player/Player.h"
+#include "../../Camera/Camera.h"
+#include "../../Enemy/EnemyManager.h"
+#include "../../Collision/Collision.h"
+
+#include "../../Enemy/EnemyA/EnemyA.h"
 
 
 void InitPlayScene()
 {
+	InitEnemy();
 	InitPlayer();
+	InitCamera();
+	SpawnA();
 }
 
 void LoadPlayScene()
 {
+	LoadEnemy();
 	LoadPlayer();
 	LoadMap();
 }
@@ -25,21 +34,30 @@ void StartPlayScene()
 
 void StepPlayScene()
 {
+	StepEnemy();
 	StepPlayer();
+	StepCamera();
 }
 
 void UpdatePlayScene()
 {
+	UpdateEnemy();
 	UpdatePlayer();
+	
+
+	ChecCollision();
 }
 
 void DrawPlayScene() 
 {
 	DrawMap();
+	DrawEnemy();
 	DrawPlayer();
+	DrawCamera();
 }
 
 void FinPlayScene()
 {
+	FinEnemy();
 	FinPlayer();
 }

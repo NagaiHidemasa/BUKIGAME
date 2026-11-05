@@ -34,6 +34,18 @@
     <Filter Include="Source\Scene\GameClear">
       <UniqueIdentifier>{48808df5-054d-4391-8f54-3ac9dc105d53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Camera">
+      <UniqueIdentifier>{3baf82e0-8443-478b-a586-f344e63a813b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Enemy">
+      <UniqueIdentifier>{9dd44e10-e946-4566-ad0b-072a9791a828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Enemy\EnemyA">
+      <UniqueIdentifier>{927c4f97-ecb1-476b-9189-5b33360fd68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Collision">
+      <UniqueIdentifier>{b92a33eb-038b-47a8-9056-fc37cacff70e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -71,6 +83,18 @@
     </ClCompile>
     <ClCompile Include="Source\Scene\GameClear\GameClear.cpp">
       <Filter>Source\Scene\GameClear</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera\Camera.cpp">
+      <Filter>Source\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Enemy\EnemyA\EnemyA.cpp">
+      <Filter>Source\Enemy\EnemyA</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Enemy\EnemyManager.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collision\Collision.cpp">
+      <Filter>Source\Collision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +136,21 @@
     </ClInclude>
     <ClInclude Include="Source\Scene\GameClear\GameClear.h">
       <Filter>Source\Scene\GameClear</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera\Camera.h">
+      <Filter>Source\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy\EnemyA\EnemyA.h">
+      <Filter>Source\Enemy\EnemyA</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy\EnemyManager.h">
+      <Filter>Source\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy\EnemyParameter.h">
+      <Filter>Source\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Collision\Collision.h">
+      <Filter>Source\Collision</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
