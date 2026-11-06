@@ -6,3 +6,5 @@ void StepEnemy();
 void UpdateEnemy();
 void DrawEnemy();
 void FinEnemy();
+
+void EnemySpawn();

@@ -13,4 +13,4 @@ EnemyAHandle GetEnemyAHandle();
 
 void EnemyHitPlayer();
 
-void SpawnA();
+void SpawnA(float x,float y);

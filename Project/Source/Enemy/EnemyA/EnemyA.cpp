@@ -134,7 +134,7 @@ void EnemyHitPlayer()
 	g_EnemyAData->muteki = 20;
 }
 
-void SpawnA()
+void SpawnA(float x,float y)
 {
 	EnemyAData* enemy = g_EnemyAData;
 	for (int i = 0; i < ENEMY_A_MAX; i++, enemy++)
@@ -144,8 +144,8 @@ void SpawnA()
 
 			enemy->HP = ENEMY_A_HP;
 
-			enemy->pos.x = 3000;
-			enemy->pos.y = 3100;
+			enemy->pos.x = x;
+			enemy->pos.y = y;
 
 			enemy->move.x = 0.0f;
 			enemy->move.y = 0.0f;

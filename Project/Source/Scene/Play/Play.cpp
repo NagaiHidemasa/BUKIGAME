@@ -8,7 +8,7 @@
 #include "../../Enemy/EnemyManager.h"
 #include "../../Collision/Collision.h"
 
-#include "../../Enemy/EnemyA/EnemyA.h"
+//#include "../../Enemy/EnemyA/EnemyA.h"
 
 
 void InitPlayScene()
@@ -16,7 +16,6 @@ void InitPlayScene()
 	InitEnemy();
 	InitPlayer();
 	InitCamera();
-	SpawnA();
 }
 
 void LoadPlayScene()
@@ -44,6 +43,12 @@ void UpdatePlayScene()
 	UpdateEnemy();
 	UpdatePlayer();
 	
+
+	//
+
+	EnemySpawn();
+
+	//
 
 	ChecCollision();
 }
