@@ -3,7 +3,7 @@
 #include "../Camera/Camera.h"
 
 MapData g_Map[MAP_MAX] = { 0 };
-int g_MapHandle[MAP_TYPE_MAX] = { 0 };
+int g_MapHandle[MAP_MAX] = { 0 };
 
 
 void InitdMap()

@@ -1,4 +1,5 @@
 #pragma once
+#include "DxLib.h"
 
 struct PlayerData
 {
@@ -6,6 +7,9 @@ struct PlayerData
 	int Level;
 	int HP;
 	int experience;
+	int direction;
+	int have;
+	int bac;
 	float ATK;
 	VECTOR move;
 	VECTOR pos;

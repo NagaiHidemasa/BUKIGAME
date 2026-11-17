@@ -46,6 +46,15 @@
     <Filter Include="Source\Collision">
       <UniqueIdentifier>{b92a33eb-038b-47a8-9056-fc37cacff70e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Enemy\EnemyChip">
+      <UniqueIdentifier>{23a0832e-6af0-4155-853a-0032bd205501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Weapon">
+      <UniqueIdentifier>{7938d0e4-72df-404e-89b7-2773dcb9929d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Weapon\WeaponOno">
+      <UniqueIdentifier>{adf586c5-34ad-45e0-8c43-19b4ace9c778}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -95,6 +104,15 @@
     </ClCompile>
     <ClCompile Include="Source\Collision\Collision.cpp">
       <Filter>Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Enemy\EnemyChip\EnemyChip.cpp">
+      <Filter>Source\Enemy\EnemyChip</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Weapon\WeaponManager.cpp">
+      <Filter>Source\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Weapon\WeaponOno\Ono.cpp">
+      <Filter>Source\Weapon\WeaponOno</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +169,18 @@
     </ClInclude>
     <ClInclude Include="Source\Collision\Collision.h">
       <Filter>Source\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy\EnemyChip\EnemyChip.h">
+      <Filter>Source\Enemy\EnemyChip</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Weapon\WeaponParamater.h">
+      <Filter>Source\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Weapon\WeaponManager.h">
+      <Filter>Source\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Weapon\WeaponOno\Ono.h">
+      <Filter>Source\Weapon\WeaponOno</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

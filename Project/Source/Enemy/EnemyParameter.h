@@ -4,6 +4,7 @@
 enum EnemyType
 {
 	ENEMY_TYPE_A,
+	ENEMY_CHIP_NONE,
 };
 
 #define ENEMY_A_MAX		(512)
@@ -15,6 +16,7 @@ struct EnemyAData
 	bool active;
 	int HP;
 	int muteki;
+	int directionA;
 	VECTOR move;
 	VECTOR pos;
 };
@@ -23,4 +25,10 @@ struct EnemyAHandle
 {
 	int Left;
 	int Right;
+};
+
+struct EnemyA1Chip
+{
+	int enemya1;
+	EnemyAData* data;
 };

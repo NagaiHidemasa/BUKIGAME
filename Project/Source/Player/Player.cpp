@@ -5,14 +5,16 @@
 
 #define PLAYER_DEFAULT_POS_X (3000)
 #define PLAYER_DEFAULT_POS_Y (3000)
-#define PLAYER_MOVE_SPEED (4.0f)
-
+#define PLAYER_MOVE_SPEED (2.0f)
+#define DIRECTION_UP (0)
+#define DIRECTION_DOWN (1)
+#define DIRECTION_LEFT (2)
+#define DIRECTION_RIGHT (3)
 
 PlayerData g_PlayerData = { 0 };
 Handle g_handle = { 0 };
 
 int BUKIChangeTiime = 0;
-int direction = 1;
 
 void InitPlayer()
 {
@@ -22,7 +24,8 @@ void InitPlayer()
 	g_PlayerData.experience = 0;
 	g_PlayerData.HP = 0;
 	g_PlayerData.active = false;
-
+	g_PlayerData.have = 0;
+	g_PlayerData.bac = 0;
 }
 
 void LoadPlayer()
@@ -53,25 +56,25 @@ void StepPlayer()
 	if (IsInputKey(KEY_UP))
 	{
 		g_PlayerData.move.y-= PLAYER_MOVE_SPEED;
-		direction = 1;
+		g_PlayerData.direction= DIRECTION_UP;
 	}
 
 	else if(IsInputKey(KEY_DOWN))
 	{
 		g_PlayerData.move.y+= PLAYER_MOVE_SPEED;
-		direction = 2;
+		g_PlayerData.direction = DIRECTION_DOWN;
 	}
 
 	if (IsInputKey(KEY_LEFT))
 	{
 		g_PlayerData.move.x-= PLAYER_MOVE_SPEED;
-		direction = 3;
+		g_PlayerData.direction = DIRECTION_LEFT;
 	}
 
 	else if (IsInputKey(KEY_RIGHT))
 	{
 		g_PlayerData.move.x += PLAYER_MOVE_SPEED;;
-		direction = 4;
+		g_PlayerData.direction = DIRECTION_RIGHT;
 	}
 
 	if (IsInputKey(KEY_A))
@@ -104,22 +107,22 @@ void DrawPlayer()
 
 	CameraData camera = GetCamera();
 
-	if (direction == 1) 
+	if (g_PlayerData.direction == 0)
 	{
 		DrawGraphF(g_PlayerData.pos.x-camera.pos.x,g_PlayerData.pos.y-camera.pos.y,g_handle.bac, TRUE);
 	}
 	
-	if (direction == 2)
+	if (g_PlayerData.direction == 1)
 	{
 		DrawGraphF(g_PlayerData.pos.x - camera.pos.x, g_PlayerData.pos.y - camera.pos.y, g_handle.nomal, TRUE);
 	}
 
-	if (direction == 3)
+	if (g_PlayerData.direction == 2)
 	{
 		DrawGraphF(g_PlayerData.pos.x - camera.pos.x, g_PlayerData.pos.y - camera.pos.y, g_handle.left, TRUE);
 	}
 
-	if (direction == 4)
+	if (g_PlayerData.direction == 3)
 	{
 		DrawGraphF(g_PlayerData.pos.x - camera.pos.x, g_PlayerData.pos.y - camera.pos.y, g_handle.right, TRUE);
 	}
