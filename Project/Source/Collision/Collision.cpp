@@ -32,8 +32,7 @@ bool CheckSquareSquare(float squareA_PosX, float squareA_PosY, float squareA_Wid
 
 void ChecCollision()
 {
-	//ChecA_Player();
-
+	ChecA_Player();
 }
 
 void ChecA_Player() 
@@ -43,39 +42,19 @@ void ChecA_Player()
 
 	for (int i = 0; i < ENEMY_A_MAX; i++, enemy++)
 	{
+		if (!enemy->active)
+		{
+			continue;
+		}
 		if (enemy->muteki < 0) {
 			if (CheckSquareSquare(player->pos.x, player->pos.y, PLAYER_SIZE_X, PLAYER_SIZE_Y,
-				enemy->pos.x, enemy->pos.y, 38, 30))
+				enemy->pos.x, enemy->pos.y, ENEMY_A_WIDTH, ENEMY_A_HEIGHT))
 			{
 				PlayerHitEnemy();
-				EnemyHitPlayer();
+				enemy->muteki = 20;
 			}
 		}
 	}
 }
 
-//void ChecA_A()
-//{
-//	EnemyAData* enemyA = GetEnemyAData();
-//	for (int i = 0; i < ENEMY_A_MAX; i++, enemyA++)
-//	{
-//		EnemyAData* enemya = GetEnemyAData();
-//		{
-//			for (int p = 0; p < ENEMY_A_MAX; p++, enemya++)
-//			{
-//				if (i == p) 
-//				{
-//
-//				}
-//				else 
-//				{
-//					if (CheckSquareSquare(enemyA->pos.x, enemyA->pos.y, 38, 30,
-//						enemya->pos.x, enemya->pos.y, 38, 30)) 
-//					{
-//						EnemyAHitEnemyA();
-//					}
-//				}
-//			}
-//		}
-//	}
-//}
+

@@ -7,6 +7,7 @@
 #include "../../Camera/Camera.h"
 #include "../../Enemy/EnemyManager.h"
 #include "../../Collision/Collision.h"
+#include "../../Weapon/WeaponManager.h"
 
 //#include "../../Enemy/EnemyA/EnemyA.h"
 
@@ -16,6 +17,7 @@ void InitPlayScene()
 	InitEnemy();
 	InitPlayer();
 	InitCamera();
+	InitWeapon();
 }
 
 void LoadPlayScene()
@@ -23,12 +25,14 @@ void LoadPlayScene()
 	LoadEnemy();
 	LoadPlayer();
 	LoadMap();
+	LoadWeapon();
 }
 
 void StartPlayScene()
 {
 	StartPlayer();
 	StartMap();
+	StartWeapon();
 }
 
 void StepPlayScene()
@@ -36,13 +40,14 @@ void StepPlayScene()
 	StepEnemy();
 	StepPlayer();
 	StepCamera();
+	StepWeapon();
 }
 
 void UpdatePlayScene()
 {
 	UpdateEnemy();
 	UpdatePlayer();
-	
+	UpdateWeapon();
 
 	//
 
@@ -58,6 +63,7 @@ void DrawPlayScene()
 	DrawMap();
 	DrawEnemy();
 	DrawPlayer();
+	DrawWeapon();
 	DrawCamera();
 }
 
@@ -65,4 +71,5 @@ void FinPlayScene()
 {
 	FinEnemy();
 	FinPlayer();
+	FinWeapon();
 }

@@ -180,7 +180,7 @@
       <Filter>Source\Weapon</Filter>
     </ClInclude>
     <ClInclude Include="Source\Weapon\WeaponOno\Ono.h">
-      <Filter>Source\Weapon\WeaponOno</Filter>
+      <Filter>Source\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

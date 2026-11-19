@@ -8,8 +8,8 @@ enum EnemyType
 };
 
 #define ENEMY_A_MAX		(512)
-#define ENEMY_A_WIDTH	(88)
-#define ENEMY_A_HEIGHT	(70)
+#define ENEMY_A_WIDTH	(38)
+#define ENEMY_A_HEIGHT	(30)
 
 struct EnemyAData
 {

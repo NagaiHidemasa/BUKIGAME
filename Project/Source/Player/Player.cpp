@@ -40,6 +40,8 @@ void StartPlayer()
 {
 	g_PlayerData.active = true;
 	g_PlayerData.HP = 100;
+	g_PlayerData.have = 1;
+	g_PlayerData.ATK = 100;
 }
 
 void StepPlayer()

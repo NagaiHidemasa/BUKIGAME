@@ -275,14 +275,6 @@ void EnemyAHitEnemyA()
 
 }
 
-void EnemyHitPlayer()
-{
-	EnemyAData* enemy = g_EnemyAData;
-	for (int i = 0; i < ENEMY_A_MAX; i++, enemy++)
-	{
-		enemy->muteki = 10;
-	}
-}
 
 void SpawnA(float x, float y)
 {

@@ -6,4 +6,3 @@ bool CheckSquareSquare(float squareA_PosX, float squareA_PosY, float squareA_Wid
 void ChecCollision();
 
 void ChecA_Player();
-void ChecA_A();

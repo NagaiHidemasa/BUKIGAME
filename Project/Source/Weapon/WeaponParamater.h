@@ -4,6 +4,8 @@
 struct OnoData
 {
 	int totu;
+	int oatacW;
+	int oatacH;
 	bool Onodirection;
 	bool atact;
 	float count;
